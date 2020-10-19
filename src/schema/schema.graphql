@@ -1,0 +1,60 @@
+type Query {
+    "Students list"
+    students: [Students!]!
+    # "courses list"
+    # course:[Course!]!
+}
+
+"Students info, this is a object type definition"
+type Students{
+    "Id for student, required string"
+    id:ID!
+    "Name, required string"
+    name:String!
+    "E-mail, required string "
+    email:String!
+    "Website, optional string"
+    website:String
+    "Courses, must be required objet with required strings"
+    courses:[Course!]!
+}
+
+type Course {
+    "Id for course, required string"
+    id:ID!
+    "Title course, required string"
+    title:String!
+    "Description course, required string"
+    description:String!
+    "Classes cuantity, required int"
+    classes:Int!
+    "Time, duration of course . Required Float"
+    time:Float!
+    "Logo, path for logo. Required string"
+    logo:String!
+    "Level of dificult, required level"
+    level:Level!
+    "Path required string"
+    path:String!
+    "Teacher course, required string"
+    teacher:String!
+    "Students course, optional object"
+    students:[Students]
+    "reviews, must be required objet with required strings"
+    reviews:[Reviews!]!
+}
+
+"enum levels of difficulty"
+enum Level {
+    ALL
+    ROOKIE
+    INTERMEDIATE
+    EXPERT
+}
+
+type Reviews {
+    id:ID!
+    name:String!
+    points:Float!
+    comment:String
+}
