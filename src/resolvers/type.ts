@@ -11,7 +11,20 @@ const type : IResolvers = {
             });
             return coursesList
         }
-    }
+    },
+    Course:{
+        students:parent =>{
+            const studentsList : Array <any> = [];
+            const idCourse = parent.id;
+            database.students.map((student:any)=>{
+               if(student.courses.filter((id:any)=> id === idCourse)>0){
+                   studentsList.push(student)
+               }
+            });
+            return studentsList
+        },
+        path:parent => `https://www.udemy.com${parent.path}`
+    },
 }
 
 export default type;
