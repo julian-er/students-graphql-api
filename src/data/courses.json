@@ -1,93 +1,93 @@
 [
   {
     "id": "1",
-    "title": "Compodoc: Crea documentación en proyectos Angular/Ionic/TS",
-    "description": "Crear documentación de calidad y MUY fácil de mantener con Compodoc para proyectos de Angular 2+ / Ionic 2+ / Typescript",
+    "title": "React Burguer: build a burguer with React.js",
+    "description": "In the project, you can build your burger, adding your custom ingredients and above LEARN REACT! ",
     "classes": 73,
     "time": 3.5,
-    "level": "MEDIUM",
-    "logo": "https://i.udemycdn.com/course/240x135/1777518_b681_6.jpg",
-    "path": "/compodoc-crea-documentacion-en-angular-ionic",
-    "teacher": "Anartz Mugika Ledo",
+    "level": "EXPERT",
+    "logo": "",
+    "path": "/ReactBurger",
+    "teacher": "Rosalen Julián",
     "reviews": [
       {
         "id": "1",
-        "name": "Juan Gómez Navarro",
+        "name": "Juan Pérez",
         "points": 4.5,
-        "comment": "Muy buen curso, justo lo que necesitaba!"
+        "comment": "Muy buen curso, justo lo que necesitaba!(eso sí, me dió hambre)"
       }
     ]
   },
   {
     "id": "2",
-    "title": "NPM: Desarrollo y publicación de librerias en JS, TS, Angular",
-    "description": "¡Aprende desde 0 las nociones de NPM y a crear librerías Node en Javascript Typescript Angular con ejemplos prácticos!",
+    "title": "Ten tu catálogo comercial online",
+    "description": "¡Genera una web estática con HTML, CSS y Bootstrap!",
     "classes": 276,
     "time": 17.5,
     "level": "ALL",
-    "logo": "https://i.udemycdn.com/course/240x135/1992318_a8ef_3.jpg",
-    "path": "/npm-librerias-node-con-js-typescript-angular-y-otras-herramientas",
-    "teacher": "Anartz Mugika Ledo",
+    "logo": "",
+    "path": "/store1905",
+    "teacher": "Rosalen Julián",
     "reviews": [
       {
         "id": "1",
-        "name": "Ruslan Gonzalez",
+        "name": "Luciano Gonzalez",
         "points": 5,
-        "comment": "Lo que he aprendido en este curso no tiene precio, realmente el instructor ha hecho un buen trabajo. En relación a la temática creo que es importantísimo conocer cómo crear librerías ya que nos ayudará a reutilizar nuestro código y a ser más productivos en nuestros trabajos y desarrollos. Definitivamente he aprendido a hacerlo bien y utilizando las mejores prácticas. Gracias Anartz !"
+        "comment": "Lo que he aprendido en este curso no tiene precio, realmente el instructor ha hecho un buen trabajo. Ahora tengo una galería con mis productos online!"
       },
       {
         "id": "2",
-        "name": "Estuardo Andrés Esquivel Díaz",
+        "name": "Joel Díaz",
         "points": 5,
-        "comment": "Aún no termino el curso pero debo de realizar mi evaluación para aquellas personas que aún no se deciden por adquirir el curso lo hagan, déjenme decirles que no se arrepentirán el curso cumple a creces su finalidad y te enseÃ±a muchos mas temas como integración continua , pruebas unitarias, interacción con servicios web de terceros, es una maravilla y el enfoque que tiene el tutor de orientarlo como apoyo hacia la comunidad le da un punto más. Cuando termine regresare a actualizar mi evaluación hasta el momento voy por la sección 9 y no tengo nada de que quejarme."
+        "comment": "Aún no termino el curso pero debo de realizar mi evaluación ... y es una autentica pasada! ya llevo la mitad de mi catálogo y estoy muy emocionado"
       }
     ]
   },
   {
     "id": "3",
-    "title": "Angular: De cero a experto (Angular 8+)",
-    "description": "Todo lo que necesitas saber de angular utilizando TypeScript y buenas prácticas ofrecidas por el equipo de angular.",
+    "title": "Desarrollo de Apps híbridas",
+    "description": "Todo lo que necesitas saber de Phonegaph y framework7 para realizar aplicaciones móviles. ",
     "classes": 326,
     "time": 28.5,
-    "level": "ALL",
-    "logo": "https://i.udemycdn.com/course/240x135/1075334_8b5f_4.jpg",
-    "path": "/angular-2-fernando-herrera",
-    "teacher": "Fernando Herrera",
+    "level": "INTERMEDIATE",
+    "logo": "",
+    "path": "/PicFolio",
+    "teacher": "Rosalen Julián",
     "reviews": [
       {
         "id": "1",
-        "name": "Aitor",
+        "name": "Anónimo",
         "points": 5,
-        "comment": "Buen profesor, buenas explicaciones, buen material y actualizado. Muy recomendado si quieres empezar a defenderte con Angular."
+        "comment": "Buen profesor, buenas explicaciones, buen material y actualizado."
       }
     ]
   },
   {
     "id": "4",
-    "title": "Flutter: Tu guía completa de desarrollo para IOS y Android ",
-    "description": "Push, Cámara, Mapas, REST API, SQLite, CRUD, Tokens, Storage, Preferencias de usuario, PlayStore, AppStore, Bloc y más!",
+    "title": "Aprende Javascript (creando un memotest) ",
+    "description": "Objetos, classes, funciones y más",
     "classes": 264,
     "time": 28.5,
-    "level": "ALL",
-    "logo": "https://i.udemycdn.com/course/240x135/2306140_8181.jpg",
-    "path": "/flutter-ios-android-fernando-herrera",
-    "teacher": "Fernando Herrera",
+    "level": "ROOKIE",
+    "logo": "",
+    "path": "/memodev",
+    "teacher": "Julián Rosalen",
     "reviews": [
       {
         "id": "1",
-        "name": "Christian",
-        "points": 5,
-        "comment": "Otro gran curso de Fernando Herrera, cada vez mejor, gracias por compartir tus conocimientos y ayudarnos a que todo sea mas facil y sencillo. Este curso ayuda a comprender bien flutter desde 0."
+        "name": "Andrea Casas",
+        "points": 3,
+        "comment": "Buen curso, tal vez un poco básico"
       },
       {
         "id": "2",
-        "name": "Juan Antonio",
+        "name": "Matías",
         "points": 5,
-        "comment": "Fantástico, de saber nada de Dart y Flutter ahora soy capaz de crear aplicaciones 100% funcionales y bonitas. Recomendado!"
+        "comment": "Recomendado!"
       },
       {
         "id": "3",
-        "name": "Jose Luis",
+        "name": "Jose Contreras",
         "points": 5
       }
     ]
