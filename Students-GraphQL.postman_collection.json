@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "ed37737f-b9b2-41f2-b8eb-7a0545afbb06",
+		"name": "Students GraphQL",
+		"description": "Graph QL course ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Students list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n    students {\r\n        name\r\n        id\r\n        email\r\n        website\r\n    courses {\r\n      id\r\n    }\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n    student(id:\"8\") {\r\n        name\r\n        id\r\n        email\r\n        website\r\n    courses {\r\n      id\r\n    }\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student info - variables",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query getStudent ($id: ID!){\r\n    student(id:$id) {\r\n        name\r\n        id\r\n        email\r\n        website\r\n    courses {\r\n      id\r\n    }\r\n  }\r\n}",
+								"variables": "{\r\n    \"id\":\"2\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student info - variables, fragments, and alias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query getStudent ($id: ID!, $id2: ID!){\r\n    one: student(id:$id) {\r\n        ...studentData\r\n  }\r\n  two: student(id:$id2) {\r\n        ...studentData\r\n  }\r\n}\r\n\r\nfragment studentData on Students {\r\n        name\r\n        id\r\n        email\r\n        website\r\n    courses {\r\n      id\r\n    }\r\n}",
+								"variables": "{\r\n    \"id\":\"1\",\r\n    \"id2\":\"2\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						},
+						"description": "### Alias\r\n\r\n```one: student```\r\n```two: student```"
+					},
+					"response": []
+				}
+			],
+			"description": "Queries for students\r\n",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4c77c0fe-62c5-4b1c-b257-b858423a3420",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2353d40-b302-44f0-bfc7-38e5eb81091d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Courses list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n    courses {\r\n        title\r\n        id\r\n        time\r\n    students {\r\n      name\r\n    }\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Course info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "{\r\n    course(id:\"1\") {\r\n        title\r\n        teacher\r\n        description\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Course info - variables",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query getStudent ($id: ID!){\r\n     course(id:$id) {\r\n        title\r\n        teacher\r\n        description\r\n  }\r\n}",
+								"variables": "{\r\n    \"id\":\"2\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Course info - variables, fragments, and alias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query getStudent ($id: ID!, $id2: ID!){\r\n    one: course(id:$id) {\r\n        ...courseData\r\n  }\r\n  two: course(id:$id2) {\r\n        ...courseData\r\n  }\r\n}\r\n\r\nfragment courseData on Course {\r\n      title\r\n      teacher\r\n      description\r\n}",
+								"variables": "{\r\n    \"id\":\"2\",\r\n    \"id2\":\"8\"\r\n}"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						},
+						"description": "### Alias\r\n\r\n```one: course```\r\n```two: course```"
+					},
+					"response": []
+				},
+				{
+					"name": "Course info - include / exclude / skip",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query getStudent ($id: ID!, $id2: ID!, $include: Boolean!, $skip:Boolean!){\r\n    one: course(id:$id) {\r\n        ...courseData\r\n  }\r\n  two: course(id:$id2) {\r\n        ...courseData\r\n  }\r\n}\r\n\r\nfragment courseData on Course {\r\n      title@include(if: $include)\r\n      teacher@skip(if: $skip)\r\n      description\r\n}",
+								"variables": "{\r\n    \"id\":\"2\",\r\n    \"id2\":\"8\",\r\n    \"include\":true,\r\n    \"skip\": true\r\n}"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						},
+						"description": "### Alias\r\n\r\n```one: course```\r\n```two: course```"
+					},
+					"response": []
+				}
+			],
+			"description": "Queries for students\r\n",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0f1c8b66-6e78-4c22-acad-1783f232eb28",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "038b674e-3ed2-4ff2-9952-841d407a5837",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Mutations",
+			"item": [
+				{
+					"name": "Add new course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation addCourse($course:CourseInput!){\r\n    newCourse(course: $course){\r\n        id\r\n        title\r\n        description\r\n    }\r\n}",
+								"variables": "{\"course\":{\r\n    \"title\":\"New Course\",\r\n    \"description\": \"Learn the basics\",\r\n    \"classes\": 100,\r\n    \"time\":20.7,\r\n    \"logo\":\"\",\r\n    \"path\":\"\",\r\n    \"teacher\":\"JR\",\r\n    \"level\":\"ALL\"\r\n}}"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation modify($course:CourseInput!){\r\n    modifyCourse(course: $course){\r\n        id\r\n        title\r\n        description\r\n        level\r\n    }\r\n}",
+								"variables": "{\"course\":{\r\n    \"id\":\"5\",\r\n    \"title\":\"New Course\",\r\n    \"description\": \"Learn the basics\",\r\n    \"classes\": 200,\r\n    \"time\":20.7,\r\n    \"logo\":\"\",\r\n    \"path\":\"\",\r\n    \"teacher\":\"JR\",\r\n    \"level\":\"ROOKIE\"\r\n}}"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation delete($course:ID!){\r\n    deleteCourse(id: $course){\r\n        id\r\n        title\r\n        description\r\n    }\r\n}",
+								"variables": "{\r\n    \"course\":5\r\n}"
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "13453d7e-e92f-4e2f-92a9-3d4f2ce9c0dc",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "67072dc6-45cf-4042-9153-686215d8eb9a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
