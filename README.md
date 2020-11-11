@@ -22,11 +22,8 @@ type Mutation {
 En éste código podrás encontrar distintos tipos de queries para interactuar con una "base de datos" expuesta en un archivo .JSON <br>
 ### Query: se definen consultas a tu base de datos
 
-<<<<<<< HEAD
-=======
 [Colección en postman](Students-GraphQL.postman_collection.json) - no recomendado, ya que, tanto en graphiQL como en ApolloServer podemos ver la documentación de cómo funciona cada query
 
->>>>>>> 2a3605234efea36f6638ecf80d35d3c56485d722
 ##### Obtener datos de la lista de estudiantes :
 ```
 query students {
@@ -153,13 +150,10 @@ type Mutation {
 ```
 In this code you can find different types of queries to interact with a "database" exposed in a .JSON file <br>
 
-<<<<<<< HEAD
-=======
 ### Query: queries are defined to your database
 
 [Collection in postman](Students-GraphQL.postman_collection.json) - not recommended, since, both in graphQL and ApolloServer we can see the documentation of how each query works
 
->>>>>>> 2a3605234efea36f6638ecf80d35d3c56485d722
 ##### Get data from student list:
 ```
 query students {
