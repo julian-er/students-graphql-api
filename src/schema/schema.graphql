@@ -11,7 +11,7 @@ type Query {
 
 type Mutation {
   newCourse(course: CourseInput!): Course!
-  modifyCourse(course: CourseInput!): Course!
+  modifyCourse(course: modifyInput!): Course!
   deleteCourse(id: ID!): Course!
 }
 
@@ -88,4 +88,25 @@ input CourseInput {
   path: String!
   "Teacher course, required string"
   teacher: String!
+}
+
+input modifyInput {
+  "Id for course, required string"
+  id: ID!
+  "Title course, required string"
+  title: String
+  "Description course, required string"
+  description: String
+  "Classes cuantity, required int"
+  classes: Int
+  "Time, duration of course . Required Float"
+  time: Float
+  "Logo, path for logo. Required string"
+  logo: String
+  "Level of dificult, required level"
+  level: Level = ALL
+  "Path required string"
+  path: String
+  "Teacher course, required string"
+  teacher: String
 }
