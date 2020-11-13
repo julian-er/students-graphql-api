@@ -43,10 +43,9 @@ const mutation: IResolvers = {
         return o.id === course.id;
       });
       if (elementExist > -1) {
-        const reviews = database.courses[elementExist].reviews;
-        course.reviews = reviews;
-        database.courses[elementExist] = course;
-        return course;
+        let newObj= Object.assign({},database.courses[elementExist], course)
+        database.courses[elementExist] = newObj;
+        return database.courses[elementExist];
       }
       return {
         id: "-1",
