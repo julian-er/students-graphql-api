@@ -79,7 +79,7 @@ mutation Delete {
 ##### Modificar un curso, en este caso debemos enviar además los datos que van a ingresarse :
 > Query
 ```
-mutation modifyCourse($course: CourseInputMod!) {
+mutation modifyCourse($course: modifyInput!) {
   modifyCourse(course: $course) {
     id
     title
@@ -209,7 +209,7 @@ mutation Delete {
 ##### Modify a course, in this case we must also send the data to be entered :
 > Query
 ```
-mutation modifyCourse($course: CourseInputMod!) {
+mutation modifyCourse($course: modifyInput!) {
   modifyCourse(course: $course) {
     id
     title
