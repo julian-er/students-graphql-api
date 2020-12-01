@@ -1,4 +1,12 @@
 # Students GraphQL API 
+> #### Installation
+>
+> - npm install
+> - npm run build:dev
+>
+
+Note: you must run install in the branch that you're trying to test.  If you want to try the two options, run the command in both branches.
+
 
 **Spa.**
 
